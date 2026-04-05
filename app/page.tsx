@@ -27,6 +27,14 @@ export default function Home() {
                                 </li>
                                 <li>
                                     <a
+                                        href="#portfolio"
+                                        className="block rounded-full px-3 py-2 transition hover:bg-[color:var(--accent-soft)] hover:text-[var(--foreground)]"
+                                    >
+                                        Portfolio
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
                                         href="#connect"
                                         className="block rounded-full px-3 py-2 transition hover:bg-[color:var(--accent-soft)] hover:text-[var(--foreground)]"
                                     >
@@ -57,12 +65,8 @@ export default function Home() {
                                 Yong Lun
                             </h1>
                             <p className="max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-xl sm:leading-8">
-                                From training neural networks to training for a
-                                handstand. I’m a big fan of the &quot;start
-                                before you’re ready&quot; philosophy—whether
-                                that’s planning a trip to Osaka, routing a new
-                                circuit board, or experimenting with generative
-                                art. This is where I document the journey.
+                                I like building stuffs that solve problems (and
+                                occasionally break things).
                             </p>
                         </div>
                         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -73,63 +77,32 @@ export default function Home() {
                                 Let&apos;s Connect
                             </a>
                             <a
-                                href="https://whyal.github.io/portfolio"
-                                target="_blank"
-                                rel="noreferrer"
+                                href="#portfolio"
                                 className="inline-flex w-full items-center justify-center rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] px-6 py-3 text-sm font-semibold text-[var(--foreground)] transition hover:border-[color:var(--accent)] hover:text-[var(--accent)] sm:w-auto"
                             >
                                 View Portfolio
                             </a>
                         </div>
                     </div>
+                </section>
 
-                    <aside className="relative overflow-hidden rounded-[1.75rem] border border-[color:var(--border)] bg-[image:var(--card-gradient)] p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)] sm:rounded-[2rem] sm:p-8">
-                        <div className="absolute inset-x-6 top-6 h-px bg-[image:var(--card-highlight)]" />
-                        <div className="relative space-y-6 sm:space-y-8">
-                            <div className="space-y-2">
-                                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--muted)] sm:text-xs sm:tracking-[0.22em]">
-                                    TL;DR
-                                </p>
-                                <p className="font-[family-name:var(--font-heading)] text-2xl leading-tight text-[var(--foreground)] sm:text-3xl">
-                                    Engineer by day, digital explorer by night
-                                </p>
-                            </div>
-                            <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-                                <div className="rounded-3xl bg-[color:var(--surface)] p-4">
-                                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
-                                        Focus
-                                    </p>
-                                    <p className="mt-2 text-sm leading-7 text-[var(--foreground)]">
-                                        Blending high-level AI with
-                                        hardware-level logic to see what happens
-                                        when code meets the real world.
-                                    </p>
-                                </div>
-                                <div className="rounded-3xl bg-[color:var(--surface)] p-4">
-                                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
-                                        Style
-                                    </p>
-                                    <p className="mt-2 text-sm leading-7 text-[var(--foreground)]">
-                                        A mix of disciplined engineering,
-                                        creative chaos, and a lot of &quot;What
-                                        if I tried this?&quot;
-                                    </p>
-                                </div>
-                                <div className="rounded-3xl bg-[color:var(--surface)] p-4">
-                                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
-                                        Side Quests
-                                    </p>
-                                    <p className="mt-2 text-sm leading-7 text-[var(--foreground)]">
-                                        Exploring the intersection of
-                                        engineering principles and creative
-                                        expression. Currently deep in the
-                                        &quot;learning&quot; phase of something
-                                        new.
-                                    </p>
-                                </div>
-                            </div>
+                <section
+                    id="portfolio"
+                    className="space-y-8 border-t border-[color:var(--border)] py-12 sm:space-y-10 sm:py-16"
+                >
+                    <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+                        <div className="space-y-3">
+                            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent)] sm:text-sm sm:tracking-[0.24em]">
+                                Portfolio
+                            </p>
+                            <h2 className="font-[family-name:var(--font-heading)] text-3xl leading-tight text-[var(--foreground)] sm:text-4xl">
+                                A growing collection of my selected work.
+                            </h2>
                         </div>
-                    </aside>
+                        <div className="rounded-[1.5rem] border border-[color:var(--border)] bg-[color:var(--surface)] px-5 py-4 text-sm leading-7 text-[var(--muted)] sm:px-6 sm:text-base">
+                            I&apos;m handpicking the good stuffs for now.
+                        </div>
+                    </div>
                 </section>
             </main>
 
@@ -140,9 +113,7 @@ export default function Home() {
                 <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-8 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">
                     <div className="space-y-2">
                         <p className="max-w-xl text-sm leading-7 text-[var(--muted)]">
-                            Software Engineer & Curious Builder. Exploring the
-                            intersection of edge AI, robust systems, and digital
-                            art.
+                            Software Engineer & Curious Builder.
                         </p>
                     </div>
                     <div className="flex flex-col gap-3 text-sm font-semibold sm:flex-row sm:flex-wrap sm:items-center">
