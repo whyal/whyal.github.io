@@ -1,52 +1,10 @@
-import ThemeToggle from "./theme-toggle-wrapper";
+import PortfolioCard from "./portfolio-card";
+import SiteHeader from "./site-header";
 
 export default function Home() {
     return (
         <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
-            <header className="sticky top-0 z-10 border-b border-[color:var(--border)] bg-[color:var(--surface-strong)]/90 backdrop-blur">
-                <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">
-                    <a
-                        href="#home"
-                        className="font-[family-name:var(--font-heading)] text-lg font-semibold tracking-[0.08em] text-[var(--foreground)] sm:text-xl"
-                    >
-                        whyal
-                    </a>
-                    <div className="flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between lg:w-auto lg:justify-end">
-                        <nav
-                            aria-label="Primary navigation"
-                            className="w-full sm:w-auto"
-                        >
-                            <ul className="grid grid-cols-3 gap-2 text-center text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)] sm:flex sm:flex-wrap sm:items-center sm:justify-end sm:gap-3 sm:text-sm sm:text-left sm:tracking-[0.16em]">
-                                <li>
-                                    <a
-                                        href="#home"
-                                        className="block rounded-full px-3 py-2 transition hover:bg-[color:var(--accent-soft)] hover:text-[var(--foreground)]"
-                                    >
-                                        Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="#portfolio"
-                                        className="block rounded-full px-3 py-2 transition hover:bg-[color:var(--accent-soft)] hover:text-[var(--foreground)]"
-                                    >
-                                        Portfolio
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="#connect"
-                                        className="block rounded-full px-3 py-2 transition hover:bg-[color:var(--accent-soft)] hover:text-[var(--foreground)]"
-                                    >
-                                        Connect
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <ThemeToggle />
-                    </div>
-                </div>
-            </header>
+            <SiteHeader />
 
             <main
                 id="home"
@@ -96,12 +54,24 @@ export default function Home() {
                                 Portfolio
                             </p>
                             <h2 className="font-[family-name:var(--font-heading)] text-3xl leading-tight text-[var(--foreground)] sm:text-4xl">
-                                A growing collection of my selected work.
+                                A growing collection of my work.
                             </h2>
                         </div>
-                        <div className="rounded-[1.5rem] border border-[color:var(--border)] bg-[color:var(--surface)] px-5 py-4 text-sm leading-7 text-[var(--muted)] sm:px-6 sm:text-base">
-                            I&apos;m handpicking the good stuffs for now.
-                        </div>
+                    </div>
+
+                    <div className="grid gap-4 sm:gap-5 lg:grid-cols-2">
+                        <PortfolioCard
+                            category="Machine Learning / Mobile Development"
+                            status="In Progress"
+                            title="Smartphone-Based Eye-Gaze Biometric Authentication"
+                            summary="An exploratory pilot study involving 12 participants to determine if consumer-grade smartphones can reliably capture eye-gaze behavioural biomarkers for user authentication."
+                        />
+                        <PortfolioCard
+                            category="Internet of Things / Mobile Development"
+                            status="Completed"
+                            title="Remote Kingpost Beam Angle Monitor"
+                            summary="An IoT-based construction safety tool that streams MPU6050 beam-angle data to a Flutter app, helping workers verify alignment from a safer distance."
+                        />
                     </div>
                 </section>
             </main>
