@@ -61,16 +61,16 @@ export default function Home() {
 
                     <div className="grid gap-4 sm:gap-5 lg:grid-cols-2">
                         <PortfolioCard
+                            category="RAG / AI"
+                            status="In Progress"
+                            title="Smart Travel Itinerary Planner"
+                            summary="An AI assistant that helps users plan their travel itinerary by providing recommendations for activities."
+                        />
+                        <PortfolioCard
                             category="Machine Learning / Mobile Development"
                             status="In Progress"
                             title="Smartphone-Based Eye-Gaze Biometric Authentication"
                             summary="An exploratory pilot study involving 12 participants to determine if consumer-grade smartphones can reliably capture eye-gaze behavioural biomarkers for user authentication."
-                        />
-                        <PortfolioCard
-                            category="Internet of Things / Mobile Development"
-                            status="Completed"
-                            title="Remote Kingpost Beam Angle Monitor"
-                            summary="An IoT-based construction safety tool that streams MPU6050 beam-angle data to a Flutter app, helping workers verify alignment from a safer distance."
                         />
                     </div>
                 </section>
