@@ -120,7 +120,7 @@ export default function Home() {
           <div className="grid gap-4 sm:gap-5 lg:grid-cols-2">
             <PortfolioCard
               category="RAG / AI"
-              status="In Progress"
+              status="Completed"
               title="Smart Travel Itinerary Planner"
               summary="An AI assistant that helps users plan their travel itinerary by providing recommendations for activities."
             />
