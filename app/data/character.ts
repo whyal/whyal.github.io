@@ -5,7 +5,6 @@ export const CHARACTER_DATA = {
     class: "Software Engineer",
     major: "Computer Engineering",
     server: "Singapore",
-    alignment: "Good",
     location: "Singapore 🗺️",
     githubUrl: "https://github.com/whyal",
     linkedinUrl: "https://www.linkedin.com/in/yong-lun-tan/",
