@@ -3,7 +3,7 @@ export const CHARACTER_DATA = {
     title: "Software Engineer",
     guild: "Singapore Institute of Technology",
     class: "Software Engineer",
-    major: "Computer Engineering",
+    discipline: "Computer Engineering",
     server: "Singapore",
     location: "Singapore 🗺️",
     githubUrl: "https://github.com/whyal",

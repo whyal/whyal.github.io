@@ -169,7 +169,7 @@ export default function CharacterPage() {
                         <div className="rpg-inner-frame text-xs">
                             {[
                                 { label: "Class", value: d.class },
-                                { label: "Major", value: d.major },
+                                { label: "Discipline", value: d.discipline },
                                 { label: "Guild", value: `<${d.guild}>` },
                                 { label: "Server", value: d.server },
                             ].map(({ label, value }) => (
