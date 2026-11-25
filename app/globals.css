@@ -1,139 +1,24 @@
 @import "tailwindcss";
 
-/* ============================================================
-   RETRO RPG THEME — Single fixed light parchment/stone palette.
-   Classic browser RPG parchment/stone style.
-   ============================================================ */
-
 :root {
-  /* Core parchment background */
-  --rpg-page-bg:      #3a3028;      /* dark leather outer page */
-  --rpg-panel-bg:     #c8b89a;      /* parchment panel */
-  --rpg-panel-light:  #dfd0b5;      /* lighter parchment inner */
-  --rpg-panel-dark:   #9e8b72;      /* darker parchment shadow */
-  --rpg-stone:        #6b5c4a;      /* stone dividers */
-  --rpg-text:         #2c1a0e;      /* dark ink text */
-  --rpg-text-muted:   #6b4f35;      /* brown muted ink */
-
-  /* Gold trim */
-  --rpg-gold:         #c8922a;
-  --rpg-gold-light:   #f0c060;
-  --rpg-gold-dark:    #8a6010;
-  --rpg-gold-border:  #b07820;
-
-  /* Tab states */
-  --rpg-tab-bg:       #b5a080;
-  --rpg-tab-active:   #dfd0b5;
-  --rpg-tab-border:   #8a6010;
+  --bg: #fafafa;
+  --fg: #171717;
+  --muted: #666;
+  --border: #e5e5e5;
+  --card: #fff;
 }
 
-/* ── Scrollbar ─────────────────────────────────────────────── */
-::-webkit-scrollbar       { width: 8px; }
-::-webkit-scrollbar-track { background: #a89070; border: 1px solid #8a6010; }
-::-webkit-scrollbar-thumb { background: #7a5c30; border: 1px solid #c8922a; border-radius: 1px; }
-::-webkit-scrollbar-thumb:hover { background: #9a7840; }
-
-/* ── Main outer frame ──────────────────────────────────────── */
-.rpg-frame {
-  border: 3px solid var(--rpg-gold-border);
-  box-shadow:
-    inset 0 0 0 1px var(--rpg-gold-light),
-    inset 0 0 0 4px var(--rpg-gold-dark),
-    0 8px 32px rgba(0, 0, 0, 0.7);
-  background: var(--rpg-panel-bg);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a0a;
+    --fg: #ededed;
+    --muted: #a1a1a1;
+    --border: #262626;
+    --card: #111;
+  }
 }
 
-/* ── Inner content panels ──────────────────────────────────── */
-.rpg-inner-frame {
-  border: 2px inset #8a6010;
-  background: var(--rpg-panel-dark);
-  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.4);
-}
-
-/* ── Gold gradient heading text ────────────────────────────── */
-.rpg-gold-text {
-  color: var(--rpg-gold);
-  text-shadow: 0 1px 2px rgba(0,0,0,0.6), 0 0 6px rgba(200,146,42,0.3);
-}
-
-/* ── Classic RPG tab buttons ───────────────────────────────── */
-.rpg-tab-btn {
-  background: linear-gradient(180deg, #c2aa85 0%, #a08868 100%);
-  border: 1px solid var(--rpg-tab-border);
-  border-bottom: 2px solid var(--rpg-gold-dark);
-  color: var(--rpg-text);
-  font-family: "Cinzel", "Palatino Linotype", Palatino, serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 5px 14px;
-  cursor: pointer;
-  transition: background 0.1s, color 0.1s;
-}
-.rpg-tab-btn:hover {
-  background: linear-gradient(180deg, #d4bb98 0%, #b89a78 100%);
-  color: var(--rpg-gold-dark);
-}
-.rpg-tab-btn-active {
-  background: linear-gradient(180deg, #dfd0b5 0%, #c8b89a 100%);
-  border-bottom: 2px solid var(--rpg-panel-bg);
-  color: var(--rpg-gold-dark);
-  position: relative;
-  z-index: 1;
-}
-
-/* ── Item rows in list views ───────────────────────────────── */
-.rpg-item-row {
-  border-bottom: 1px solid var(--rpg-stone);
-  transition: background 0.1s;
-}
-.rpg-item-row:hover {
-  background: rgba(200, 146, 42, 0.15);
-}
-
-/* ── Section title bars ────────────────────────────────────── */
-.rpg-section-bar {
-  background: linear-gradient(90deg, var(--rpg-gold-dark), var(--rpg-gold), var(--rpg-gold-dark));
-  color: #fff8e8;
-  font-family: "Cinzel", Palatino, serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  padding: 2px 10px;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
-}
-
-/* ── Classic heading font ──────────────────────────────────── */
-.rpg-font-title {
-  font-family: "Cinzel", "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  letter-spacing: 0.06em;
-  color: var(--rpg-text);
-  text-shadow: 0 1px 0 rgba(255,255,255,0.35), 0 -1px 0 rgba(0,0,0,0.3);
-}
-
-/* ── Rarity colour chips ───────────────────────────────────── */
-.rarity-legendary { color: #ff8c00; font-weight: 700; }
-.rarity-epic      { color: #8b5cf6; font-weight: 700; }
-.rarity-rare      { color: #2563eb; font-weight: 700; }
-.rarity-awesome   { color: #16a34a; font-weight: 700; }
-.rarity-artifact  { color: #dc2626; font-weight: 700; }
-
-/* ── Page root ─────────────────────────────────────────────── */
 html, body {
-  background-color: var(--rpg-page-bg);
-  color: var(--rpg-text);
-  font-family: "Tahoma", "Verdana", "Geneva", sans-serif;
-  font-size: 13px;
-  min-height: 100%;
-  /* Classic tiled leather texture feel */
-  background-image:
-    repeating-linear-gradient(
-      45deg,
-      rgba(0,0,0,0.04) 0px,
-      rgba(0,0,0,0.04) 2px,
-      transparent 2px,
-      transparent 8px
-    );
+  background: var(--bg);
+  color: var(--fg);
 }

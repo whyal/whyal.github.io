@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
+const geist = Geist({ subsets: ["latin"] });
+
 export const metadata: Metadata = {
-    title: "Yong Lun | Character Page",
-    description: "Official Character Page for Yong Lun - Software Engineer.",
+    title: "Yong Lun | Software Engineer",
+    description: "Yong Lun — Software Engineer based in Singapore.",
 };
 
 export default function RootLayout({
@@ -12,22 +15,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="h-full">
-            <head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link
-                    rel="preconnect"
-                    href="https://fonts.gstatic.com"
-                    crossOrigin="anonymous"
-                />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&display=swap"
-                    rel="stylesheet"
-                />
-            </head>
-            <body className="min-h-full flex flex-col antialiased">
-                {children}
-            </body>
+        <html lang="en" className={`h-full ${geist.className}`}>
+            <body className="min-h-full antialiased">{children}</body>
         </html>
     );
 }
