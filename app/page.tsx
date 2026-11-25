@@ -20,7 +20,7 @@ export default function Home() {
         <main className="mx-auto flex max-w-3xl flex-col gap-16 px-6 py-20 sm:py-28">
             <header className="flex flex-col gap-6 sm:flex-row sm:items-center">
                 <Image
-                    src="/yl-headshot.jpeg"
+                    src="/yl-headshot.jpg"
                     alt={p.name}
                     width={96}
                     height={96}
